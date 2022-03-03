@@ -5,6 +5,27 @@ def fibonacci(index):
         return index
     return fibonacci(index - 1) + fibonacci(index - 2)
 
-print(fibonacci(5))
-print(fibonacci(10))
-print(fibonacci(11))
+# print(fibonacci(5))
+# print(fibonacci(10))
+# print(fibonacci(11))
+
+# Recursive Memoization
+def fibonacciMemoized(index, cache = None):
+    # Check: Initialize cache
+    if cache is None: 
+        cache = {}
+    # Check: Cache memory
+    if index in cache: 
+        return cache[index]
+
+    result = index
+    # Base Case(s)
+    if result < 2: 
+        result = index
+    else: 
+        result = fibonacciMemoized(index - 1) + fibonacciMemoized(index - 2)
+    return result
+
+print(fibonacciMemoized(5))
+print(fibonacciMemoized(10))
+print(fibonacciMemoized(11))
