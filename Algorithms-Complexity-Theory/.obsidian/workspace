@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Complexity-Theory/The-Big-Ordo-Notation.md",
+            "file": "Complexity-Theory/05 - Algorithms-Run-Time.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Complexity-Theory/The-Big-Ordo-Notation.md",
+                "file": "Complexity-Theory/05 - Algorithms-Run-Time.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,7 +89,13 @@
   },
   "active": "a646a7b0179cf60a",
   "lastOpenFiles": [
-    "Complexity-Theory/The-Big-Ordo-Notation.md",
-    "Complexity-Theory/Complexity-Theory-Basics.md"
+    "Complexity-Theory/05 - Algorithms-Run-Time.md",
+    "Complexity-Theory/07 - Analyzing-Loops.md",
+    "Complexity-Theory/06 - Complexity-Classes.md",
+    "Complexity-Theory/04 - The-Big-Theta-Notation.md",
+    "Complexity-Theory/03 - The-Big-Omega-Notation.md",
+    "Complexity-Theory/02 - The-Big-Ordo-Notation.md",
+    "Complexity-Theory/01 - Complexity-Theory-Basics.md",
+    "assets/Screen Shot 2022-06-08 at 1.24.09 PM.png"
   ]
 }
