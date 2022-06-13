@@ -5,43 +5,49 @@ def fibonacci(index):
         return index
     return fibonacci(index - 1) + fibonacci(index - 2)
 
+
 print(fibonacci(5))
 print(fibonacci(10))
 print(fibonacci(11))
 
 # Recursive Memoization
 #  - Optimized to reduce number of calculations required
-def fibonacciMemoized(index, cache = None):
+
+
+def fibonacci_memoized(index, cache=None):
     # Check: Initialize cache
-    if cache is None: 
+    if cache is None:
         cache = {}
     # Check: Cache memory
-    if index in cache: 
+    if index in cache:
         return cache[index]
 
     result = index
     # Base Case(s)
-    if result < 2: 
+    if result < 2:
         result = index
-    else: 
-        result = fibonacciMemoized(index - 1) + fibonacciMemoized(index - 2)
+    else:
+        result = fibonacci_memoized(index - 1) + fibonacci_memoized(index - 2)
     return result
 
-print(fibonacciMemoized(5))
-print(fibonacciMemoized(10))
-print(fibonacciMemoized(11))
 
-# Bottom-up 
+print(fibonacci_memoized(5))
+print(fibonacci_memoized(10))
+print(fibonacci_memoized(11))
+
+# Bottom-up
 # - Optimized to solve sub-problems for when they're needed
 # - Throw away previous calculation to reduce memory (space complexity)
 
-def fibonacciBottomUp(index):
+
+def fibonacci_bottom_up(index):
     a = 1
     b = 1
     for i in range(2, index):
         a, b = b, a + b
     return b
 
-print(fibonacciBottomUp(5))
-print(fibonacciBottomUp(10))
-print(fibonacciBottomUp(11))
+
+print(fibonacci_bottom_up(5))
+print(fibonacci_bottom_up(10))
+print(fibonacci_bottom_up(11))
