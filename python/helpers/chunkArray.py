@@ -12,7 +12,10 @@ print("Non-Generator Memory Size:", sys.getsizeof(chunked))
 
 
 def chunked_generator(array, chunk_size):
-    """Produces a memory-efficient chunked array"""
+    """
+       Produces a memory-efficient chunked array. 
+       To see / generate results wrap variable in list() or use a list comprehension.
+    """
     return (array[i:i+chunk_size] for i in range(0, len(array), chunk_size))
 
 

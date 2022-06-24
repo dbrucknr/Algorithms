@@ -1,0 +1,54 @@
+######
+Building Blocks of Linked Lists:
+
+1. Linked Lists store their data in a series of nodes.
+2. Each node contains the data being stored and a pointer.
+3. The pointer indicates the location and memory address that holds the next Node.
+
+Going backwards and forwards?
+Attach a secondary pointer that points backward in addition to a next pointer (Doubly-Linked List)
+
+If you only need to go forwards, you need a Singly Linked List (make use of the next pointer only.)
+
+A "Head" is the entry point to a Linked List. It's not a separate node, just a reference
+to the first node.
+
+The end of a Linked List (Tail) is indicated by a node whose pointer value indicates a 'None' value.
+
+If the 'Head' points to None, we assume the Linked List is empty.
+
+A good anology to think about Linked List is a garbage truck driver.
+At the start of the day, the driver is given an address to go to, or the first Node.
+The garbage / bins awaiting to be emptied / picked up is like the data aspect of the Node.
+The next address on the list is like the pointer element of a Linked List; it tells the driver where to go next.
+When there are no more items on the driver's list, the day's route is over, or None.
+
+Linked Lists are linear data structures (they are conceptualized as a line of data)
+
+In summary, Nodes are the building blocks of Linked Lists.
+
+######
+Operations of Linked Lists:
+
+* Adding nodes at the head or tail
+* Adding a node before or after a specific key
+
+* Removing a node from the beginning or end
+* Removing a node before or after a specific key
+
+* Check if Linked List is empty
+* Check how many nodes are in it
+* Find a node's index given it's key
+
+In summary, Linked Lists are sequential-access data structures.
+We can only acces a node by first accessing all the nodes that came before it.
+
+When does it make sense to use a Linked List?
+* Insert items "in between" other items.
+* Collection size is unknown.
+* You don't need random access.
+* Not concerned about memory usage.
+
+Linked Lists are Recursive data structures
+* It's either empty
+* Or, it consists of a node that contains data and a pointer to a linked-list
