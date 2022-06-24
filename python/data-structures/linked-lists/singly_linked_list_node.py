@@ -23,13 +23,13 @@ class Singly_Linked_List_Node():
         self.next = new_next
 
 
-node = Singly_Linked_List_Node("Example")
-print(node.get_data())
+# node = Singly_Linked_List_Node("Example")
+# print(node.get_data())
 
-node.set_data(81)
-print(node.get_data())
+# node.set_data(81)
+# print(node.get_data())
 
-another_node = Singly_Linked_List_Node("Another")
+# another_node = Singly_Linked_List_Node("Another")
 
-node.set_next(another_node)
-print(node.get_next())
+# node.set_next(another_node)
+# print(node.get_next())
