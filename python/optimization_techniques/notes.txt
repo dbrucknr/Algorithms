@@ -1,0 +1,14 @@
+Three Rules of optimization (business logic / perspective):
+
+1. Don't - You should always have measurable peformance goals before optimizing code.
+2. Dont...Yet - Developer time is expensive; sometimes the best solution is to upgrade hardware.
+3. Profile before optimizing - profiling measures where code spends its time.
+
+
+General tips for optimizing
+
+1. Use real data (don't use generated / synthetic data.) and benchmark on production hardware.
+2. Windows: turn off anti-virus
+3. Have a test suite ready
+4. Know when to measure. Many programs have a warm-up time (config / database fetching).
+
