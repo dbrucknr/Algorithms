@@ -1,4 +1,4 @@
-class Singly_Linked_List_Node():
+class Singly_Linked_List_Node:
     def __init__(self, data) -> None:
         self.data = data
         self.next = None

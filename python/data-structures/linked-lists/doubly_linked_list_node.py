@@ -1,4 +1,4 @@
-class Doubly_Linked_List_Node():
+class Doubly_Linked_List_Node:
     def __init__(self, data) -> None:
         self.data = data
         self.next = None
@@ -32,19 +32,19 @@ class Doubly_Linked_List_Node():
         self.previous = new_previous
 
 
-first = Doubly_Linked_List_Node("first")
-second = Doubly_Linked_List_Node("second")
-third = Doubly_Linked_List_Node("third")
+# first = Doubly_Linked_List_Node("first")
+# second = Doubly_Linked_List_Node("second")
+# third = Doubly_Linked_List_Node("third")
 
-first.set_next(second)
+# first.set_next(second)
 
-second.set_previous(first)
-second.set_next(third)
+# second.set_previous(first)
+# second.set_next(third)
 
-third.set_previous(second)
+# third.set_previous(second)
 
-print("First next:", first.get_next())
-print("Second next:", second.get_next())
+# print("First next:", first.get_next())
+# print("Second next:", second.get_next())
 
-print("Second previous:", second.get_previous())
-print("Third previous:", third.get_previous())
+# print("Second previous:", second.get_previous())
+# print("Third previous:", third.get_previous())

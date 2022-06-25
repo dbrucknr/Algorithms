@@ -1,22 +1,16 @@
-from singly_linked_list_node import Singly_Linked_List_Node
+from doubly_linked_list_node import Doubly_Linked_List_Node
 
 
-class Singly_Linked_List:
+class Double_Linked_List:
     def __init__(self) -> None:
         self.head = None
 
     def __repr__(self) -> str:
-        return "SLL object: head={}".format(self.head)
+        return "DLL object: head={}".format(self.head)
 
     def is_empty(self):
-        """Returns true if SLL instance is empty"""
+        """Returns true if DLL instance is empty"""
         return self.head is None
-
-    def add_to_front(self, new_data):
-        """Add Node to the front of the linked list"""
-        temp_node = Singly_Linked_List_Node(new_data)
-        temp_node.set_next(self.head)
-        self.head = temp_node
 
     def size(self):
         """
@@ -50,6 +44,16 @@ class Singly_Linked_List:
             current = current.get_next()
         return False
 
+    def add_front(self, new_data):
+        """Add Node to the front of the linked list"""
+        temp_node = Doubly_Linked_List_Node(new_data)
+        temp_node.set_next(self.head)
+
+        if self.head is not None:
+            self.head.set_previous(temp_node)
+
+        self.head = temp_node
+
     def remove(self, data):
         """
             Remove first occurence of a Node that contains the data param as its self.data
@@ -60,41 +64,47 @@ class Singly_Linked_List:
         if self.head is None:
             return "Linked List is empty. No nodes to remove."
         current = self.head
-        previous = None
         found = False
         while not found:
             if current.get_data() == data:
                 found = True
             else:
-                if current.get_next() == None:
+                if current.get_next() is None:
                     return "A node with specified data value is not present."
                 else:
-                    previous = current
                     current = current.get_next()
-        if previous is None:
+        if current.previous is None:
             self.head = current.get_next()
         else:
-            previous.set_next(current.get_next())
+            current.previous.set_next(current.get_next())
+            current.next.set_previous(current.get_previous())
 
 
-sll = Singly_Linked_List()
-print(sll.is_empty())
+dll = Double_Linked_List()
+print(dll.size())
+print(dll.remove("Nothing"))
 
-node = Singly_Linked_List_Node(1)
-print(sll.remove("Non-Exist"))
-sll.head = node
-print(sll.remove(1))
-node = Singly_Linked_List_Node("woah!")
-sll.head = node
-print("Empty?", sll.is_empty())
-print("Head?", sll.head)
-print("Size?", sll.size())
+dll.add_front(1)
+print(dll.head)
+print(dll.size())
 
-sll.add_to_front("test")
-print(sll.head)
-print("check new head's next value:", sll.head.get_next())
-print(sll.size())
 
-print(sll.search("test"))
-print(sll.remove("test"))
-print(sll.size())
+print(dll.head.previous)
+print(dll.head.next)
+
+dll.add_front(2)
+print(dll.head)
+print(dll.size())
+
+print(dll.head.previous)
+print(dll.head.next)
+
+print(dll.head.next.next)
+dll.add_front(3)
+print(dll.remove("Nothing"))
+
+dll.remove(2)
+print(dll.size())
+print(dll.head)
+print(dll.head.next)
+print(dll.head.next.previous)
