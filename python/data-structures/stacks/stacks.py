@@ -1,4 +1,10 @@
 class Stack:
+    """
+        Last-in First-out Data Type (LIFO).
+        * Consider a stack of dinner plates: You select from the top of the stack.
+        * Recursive Data Structure
+    """
+
     def __init__(self) -> None:
         self._items = []
 
