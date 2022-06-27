@@ -48,16 +48,16 @@ class Queue:
 
 
 #####
-queue = Queue()
-queue.dequeue()  # Error check
-queue.peek()  # Error check
-print(queue.size())
-print(queue.is_empty())
-queue.enqueue("task-1")
-queue.enqueue("task-2")
-print(queue.peek())
-print(queue._items)
-print(queue.size())
-print(queue.is_empty())
-queue.dequeue()
-print(queue._items)
+# queue = Queue()
+# queue.dequeue()  # Error check
+# queue.peek()  # Error check
+# print(queue.size())
+# print(queue.is_empty())
+# queue.enqueue("task-1")
+# queue.enqueue("task-2")
+# print(queue.peek())
+# print(queue._items)
+# print(queue.size())
+# print(queue.is_empty())
+# queue.dequeue()
+# print(queue._items)
