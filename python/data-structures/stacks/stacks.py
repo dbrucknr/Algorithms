@@ -40,17 +40,17 @@ class Stack:
 
 
 ####
-the_stack = Stack()
-the_stack.peek()  # Error check
-the_stack.pop()  # Error check
-print(the_stack.is_empty())
-print(the_stack.size())
-the_stack.push("one")
-the_stack.push("two")
-print(the_stack.peek())
-print(the_stack.size())
-print(the_stack._items)
-the_stack.pop()
-print(the_stack._items)
-print(the_stack.size())
-print(the_stack.is_empty())
+# the_stack = Stack()
+# the_stack.peek()  # Error check
+# the_stack.pop()  # Error check
+# print(the_stack.is_empty())
+# print(the_stack.size())
+# the_stack.push("one")
+# the_stack.push("two")
+# print(the_stack.peek())
+# print(the_stack.size())
+# print(the_stack._items)
+# the_stack.pop()
+# print(the_stack._items)
+# print(the_stack.size())
+# print(the_stack.is_empty())
