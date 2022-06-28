@@ -2,7 +2,10 @@ from helpers.chunkArray import chunked_generator
 
 
 class Reactive:
-    """Enables responsive functions to be called when data is updated."""
+    """
+        Enables responsive functions to be called when data is accessed, or updated.
+        Currently only printing values
+    """
 
     def __init__(self) -> None:
         self._total_changes = 0
@@ -90,6 +93,7 @@ print(test)
 
 proxy._get(data, "array")
 proxy._set(data, "array", [0])
+print(proxy._total_changes)
 # @proxy.method(proxy)
 # def every(array, callback):
 #     return all(callback(i) for i in array)
