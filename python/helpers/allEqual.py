@@ -1,4 +1,6 @@
-def allEqual(array):
+from typing import List
+
+def allEqual(array: List) -> bool:
     for value in array:
         if value != array[0]:
             return False
@@ -7,7 +9,7 @@ def allEqual(array):
 # print(allEqual([1, 1, 1]))
 # print(allEqual([1, 3, 1]))
 
-def allEqualComprehension(array):
+def allEqualComprehension(array: List) -> List:
     return [array[i] == array[0] for i, v in enumerate(array)]
 
 print(allEqualComprehension([1, 1, 1]))

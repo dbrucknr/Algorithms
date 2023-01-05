@@ -46,3 +46,12 @@ matrix = ([[10, 10, 2, 0, 20, 4],
            [1, 0, 2, 20, 0, 4]])
 
 print(find_max_path(matrix))
+
+def find_max_path_simple(matrix):
+    max_sum = 0
+    for row in matrix:
+        row_max_sum = 0
+        for element in row:
+            row_max_sum = max(row_max_sum, element + max_sum)
+        max_sum = max(max_sum, row_max_sum)
+    return max_sum

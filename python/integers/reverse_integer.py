@@ -1,5 +1,5 @@
 
-def reverse_integer(number) -> int:
+def reverse_integer(number: int) -> int:
     reversed_number = 0
     remainder = 0
 
