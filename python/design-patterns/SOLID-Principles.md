@@ -8,6 +8,8 @@ Open-Closed
 - The Open-Closed Principle suggests that when you add new functionality, you add it via extension not via modification.
 
 Liskov Substitution
+- if you have some interface that takes some sort of base class you should be able
+to stick a derived class in there and everything should work.
 
 Interface Segregation
 
