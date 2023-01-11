@@ -11,7 +11,7 @@ class Person:
     def __init__(self, name) -> None:
         self.name = name
 
-# The fix
+# The fix - interface
 class RelationshipBrowser:
     @abstractmethod
     def find_all_chidren_of(self, name):
