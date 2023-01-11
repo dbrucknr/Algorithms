@@ -10,6 +10,7 @@ Open-Closed
 Liskov Substitution
 - if you have some interface that takes some sort of base class you should be able
 to stick a derived class in there and everything should work.
+- Substitute a base type for a subtype.
 
 Interface Segregation
 - avoid too many methods, elements, or variables in a single interface.
