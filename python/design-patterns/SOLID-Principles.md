@@ -12,5 +12,8 @@ Liskov Substitution
 to stick a derived class in there and everything should work.
 
 Interface Segregation
+- avoid too many methods, elements, or variables in a single interface.
+- By reducing the scale of an interface, code becomes more modular, and can
+be built as needed across many contexts.
 
 Dependency Inversion

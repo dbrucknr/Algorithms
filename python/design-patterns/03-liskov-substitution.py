@@ -55,4 +55,7 @@ use_it(square)
 
 # To fix this broken principle, it is up to you...
 # You may decide that there's no reason to have the Square class and instead
-# Add some sort of boolean property on the Rectangle that tells you it's a square
+# add some sort of boolean property on the Rectangle that tells you it's a square...
+
+# Or perhaps you could have a Factory Method -  there are many ways to address this
+# broken principle example.
