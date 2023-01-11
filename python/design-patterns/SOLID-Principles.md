@@ -17,3 +17,7 @@ Interface Segregation
 be built as needed across many contexts.
 
 Dependency Inversion
+- Does not relate to dependency injection
+- High level modules / classes should not depend on low level modules / classes. Instead,
+they should depend on abstractions. You want to depend on interfaces rather than concrete
+implementations because you can swap one for the other
