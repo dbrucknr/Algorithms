@@ -1,6 +1,7 @@
 from uuid import uuid4
 from operator import itemgetter
-from typing import List
+from itertools import chain
+from typing import List, Dict
 
 #################################################################
 users = [
@@ -126,3 +127,40 @@ def pluck_nested_values(array_of_arrays: List[List], key: str) -> List:
 
 print(pluck_nested_values(nested_instance, 'group'))
 print(pluck_nested_values(nested_instance, 'status'))
+
+
+test = [
+    {
+        'name': 'first', 
+        'array': [1, 2, 3, 4, 5]
+    }, 
+    {
+        'name': 'second', 
+        'array': [6, 7, 8, 9]
+    }, 
+    {
+        'name': 'third', 
+        'array': [10, 11, 12]
+    }
+]
+print(*test)
+
+def pluck_nested_array_flattened(array_of_dicts: List[Dict], key: str) -> List:
+    values = [
+        [attr for attr in dictionary[key]] 
+        for dictionary in array_of_dicts
+    ]
+    return [array for arrays in values for array in arrays]
+
+print(pluck_nested_array_flattened(test, 'array'))
+
+def pluck_nested_array_flattened_chain(array_of_dicts: List[Dict], key: str) -> List:
+    return list(
+        chain(*[
+                [attr for attr in dictionary[key]] 
+                for dictionary in array_of_dicts
+            ]
+        )
+    )
+
+print(pluck_nested_array_flattened_chain(test, 'array'))
