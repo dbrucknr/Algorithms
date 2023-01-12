@@ -9,7 +9,7 @@ def allEqual(array: List) -> bool:
 # print(allEqual([1, 1, 1]))
 # print(allEqual([1, 3, 1]))
 
-def allEqualComprehension(array: List) -> List:
+def allEqualComprehension(array: List) -> List[bool]:
     return [array[i] == array[0] for i, v in enumerate(array)]
 
 print(allEqualComprehension([1, 1, 1]))
