@@ -5,6 +5,8 @@
 # How can we get several builders participating in the process, and have a
 # nice interface to do use them?
 
+# Note: This example appears to break the open-closed principle
+
 class Person:
     def __init__(self) -> None:
         print("Creating a person instance")
