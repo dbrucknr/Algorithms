@@ -18,12 +18,14 @@ def differenceBy(_array: List, __array: List, fn: Callable) -> List:
     ]
 
 print(
+    "Difference By floor",
     differenceBy(
         [2.1, 1.2], [2.3, 3.4], floor
     )
 )
 
 print(
+    "Difference By lambda v: v['x']",
     differenceBy(
         [{ "x": 2 }, { "x": 1 }], [{ "x": 1 }], lambda v: v["x"]
     )
